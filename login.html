@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="login.css">
+  <script src="login.js" defer></script>
+  <title>Nha Consulta</title>
+</head>
+<body>
+    <section id="login">
+        <div class="form-box">
+            <div class="form-value">
+                
+                    <h2>Login</h2>
+                    <div class="inputbox">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email">
+                        <label for="">Email</label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password">
+                        <label for="">Password</label>
+                    </div>
+                    <div class="forget">
+                        <label for=""><input type="checkbox">Remember Me  Forget Password</label>
+                      
+                    </div>
+                    <button id="btn">Log in</button>
+                    <div class="register">
+                        <p>Don't have a account <button id="btnr">Register</button></p>
+                    </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="registo" class="hide">
+        <div class="form-box">
+            <div class="form-value">
+                
+                    <h2>Registar</h2>
+                    <div class="inputbox">
+                        <ion-icon name="person-outline"></ion-icon>
+                        <input type="text" required>
+                        <label for="">Nome</label>
+                    </div>
+                    
+                    <div class="inputbox">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email"required >
+                        <label for="">Email</label>
+                    </div>
+
+                    <div class="inputbox">
+                        <ion-icon name="call-outline"></ion-icon>
+                        <input type="number" required>
+                        <label for="">Telefone</label>
+                    </div>
+
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" required>
+                        <label for="">Password</label>
+                    </div>
+
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" required>
+                        <label for="">Confirmar Password</label>
+                    </div>
+                    
+                    <button class="btnl" id="btn2">Registar</button>
+                    
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="tela" class="hide">
+        <div class="form-box2">
+        <h1>Nha Consulta</h1>
+        <h2>Bem Vindo</h2>
+        <button class="btnconsulta" id="btnC">Marcar Consulta</button>
+        </div>
+
+    </section>
+
+    <section id="esp" class="hide">
+        <div class="form-boxE">
+            <div class="inputbox">
+                <input type="text" required>
+                <label for="">Especialidade</label>
+            </div>
+            <button id="btnEs">Escolher</button>
+        </div>
+    </section>
+
+<section id="medicos" class="hide">
+    <li>
+        <div class="form-boxM">
+            <p>Eber Urgimed</p>
+        </div>
+        <div class="form-boxM">
+            <p>Jose Medicentro</p>
+        </div>
+        <div class="form-boxM">
+            <p>Rui Sameg</p>
+        </div>
+        <div class="form-boxM">
+            <p>Pegro Urgimed</p>
+        </div>
+    </li>
+
+</section>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
