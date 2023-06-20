@@ -10,6 +10,11 @@ const marcar = document.getElementById("btnC");
 const telmaEsp = document.getElementById("esp");
 const escolha = document.getElementById("btnEs");
 const telaM = document.getElementById("medicos")
+const meedicos = document.querySelector(".meeedicos");
+const eleMedic = meedicos.querySelector("li");
+const jnaHor = document.getElementById("horario");
+const btnHo = document.getElementById("btnH");
+const btnLog = document.getElementById("btnLog");
 
 
 
@@ -31,21 +36,41 @@ const registo = () => {
 }
 
 const logar = () =>{
-    if(dadosLogin[0].value === clientes[0].email && dadosLogin[1].value ===clientes[0].password){
+    let validalogin = false;
+
+    for(let i = 0; i < clientes.length; i++){
+        if(dadosLogin[0].value === clientes[i].email && dadosLogin[1].value === clientes[i].password){
+            validalogin = true;
+            break;
+        }
+    }
+
+    if(validalogin === true){
         janlogin.classList.add("hide");
         tela.classList.remove("hide");
-
+        limparCampos2();
     }else{
-        alert("Login sem sucesso");
-    } 
-    /* janlogin.classList.add("hide");
-    tela.classList.remove("hide"); */
+        alert("Erro")
+    }
+    /*  janlogin.classList.add("hide");
+    tela.classList.remove("hide");  */
+}
+
+const limparCampos = () =>{
+    for (const entrada of dadosInput){
+        entrada.value = "";
+    }
+}
+
+const limparCampos2 = () =>{
+    for (const entrada of dadosLogin){
+        entrada.value = "";
+    }
 }
 
 const efetuarregisto = () => {
     janregisto.classList.add("hide");
     janlogin.classList.remove("hide");
-    add();
     alert("Registo com suceso");
 }
 
@@ -68,7 +93,23 @@ const add = () => {
     };
 
     clientes.push(dadosNovoCliente);
+    limparCampos();
     
+}
+
+const horario = () =>{
+    telaM.classList.add("hide");
+    jnaHor.classList.remove("hide");
+}
+
+const home = () => {
+    jnaHor.classList.add("hide");
+    tela.classList.remove("hide");
+}
+
+const logout = () => {
+    tela.classList.add("hide");
+    janlogin.classList.remove("hide");
 }
 
 btnl.addEventListener("click", efetuarregisto);
@@ -76,3 +117,6 @@ btnr.addEventListener("click", registo);
 login.addEventListener("click", logar);
 marcar.addEventListener("click", marcarC);
 escolha.addEventListener("click", mostraMedicos);
+eleMedic.addEventListener("click", horario);
+btnHo.addEventListener("click", home);
+btnLog.addEventListener("click", logout);
